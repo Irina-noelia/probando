@@ -1,44 +1,43 @@
 <%- include('../partials/head') %>
 
   <link rel="stylesheet" href="/css/estilo1.css">
-  
+
   </head>
-  
+
   <body>
-    
+
     <section id="header">
-      <a href="" ><img src="images/logo.png" class="logo" alt="logo"> </a>
+      <a href=""><img src="images/logo.png" class="logo" alt="logo"> </a>
 
       <div>
-       <ul id="navbar">
-           <li> <a href="/" class="">Home </a></li>
-           <li> <a href="/products">Shop </a></li>
-           <li> <a href="">Nosotros </a></li>
-           <li> <a href="">Contacto </a></li>
-           <div class="btn-group">
-               <button type="button" class="btn btn-default dropdown-toggle"
-                       data-toggle="dropdown">
-                       <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                       
-               </button>
-             
-               <ul class="dropdown-menu" role="menu">
-                 <li><a href="/login">Login</a></li>
-                 <li><a href="/register">Resistrarse</a></li>
-                 
+        <ul id="navbar">
+          <li> <a href="/" class="">Home </a></li>
+          <li> <a href="/products">Shop </a></li>
+          <li> <a href="">Nosotros </a></li>
+          <li> <a href="">Contacto </a></li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
 
-       
-               </ul>
+            </button>
 
-             </div>
-           
-           
-       </ul>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Resistrarse</a></li>
+
+
+
+            </ul>
+
+          </div>
+
+
+        </ul>
 
 
       </div>
-      
-   </section>
+
+    </section>
     <main>
       <section class="row-form">
         <article class="col-12  card">
@@ -52,47 +51,55 @@
           <div class="row-form">
             <div class="col-8 mx-auto  ">
               <div class="create-form text-center">
+                <p>
+                  <%= locals.mustLogging ?? 'sin mensaje' %>
+                </p>
                 <form class="form-new" action="/login" method="POST">
                   <div>
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="<%= locals.olds && olds.email ? olds.email : '' %>">
-                <% if (locals.errors && errors.email) { %>
-                <span><%= errors.email.msg %></span>
-                <% } %>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"
+                      value="<%= locals.olds && olds.email ? olds.email : '' %>">
+                    <% if (locals.errors && errors.email) { %>
+                      <span>
+                        <%= errors.email.msg %>
+                      </span>
+                      <% } %>
                   </div>
 
                   <div>
-                <label for="password">Contrasenia</label>
-                <input type="password" name="password" id="password">
-                <% if (locals.errors && errors.password) { %>
-                <span><%= errors.password.msg %></span>
-                <% } %>
+                    <label for="password">Contrasenia</label>
+                    <input type="password" name="password" id="password">
+                    <% if (locals.errors && errors.password) { %>
+                      <span>
+                        <%= errors.password.msg %>
+                      </span>
+                      <% } %>
                   </div>
 
                   <div>
                     <div>
                       <input type="checkbox" name="rememberMe" id="remember-me">
                       <label for="remember-me">Recuerdame (por 30 días)</label>
-                  </div>
+                    </div>
                   </div>
 
                   <div>
                     <button type="submit" class="btn btn-info">Ingresar</button>
-                    
-                  </div>
-                  
-                </div>
-                <div class="foot-lnk">
-                  <a href="#forgot">Olvidé la contraseña</a>
-                </div>
-                        <div class="foot-lnk">
-                          <h4>Primera vez en Helático?</h4><a href="/register">Registrate</a>
-                        </div>
 
-           </div>
+                  </div>
+
+              </div>
+              <div class="foot-lnk">
+                <a href="#forgot">Olvidé la contraseña</a>
+              </div>
+              <div class="foot-lnk">
+                <h4>Primera vez en Helático?</h4><a href="/register">Registrate</a>
+              </div>
+
+            </div>
           </div>
-        </form>
-      </div>
+          </form>
+        </div>
     </main>
 
   </body>
@@ -126,7 +133,7 @@
 
     </div>
 
-    
+
   </footer>
-  
-</html>
+
+  </html>

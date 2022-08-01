@@ -118,5 +118,11 @@
         "email": "irudigio@gmail.com",
         "password": "$2a$10$QgdDfFDGcZPE9KXi./h2CO48ElhBUWpcRWtthxLqt6CIcMGvETvFm",
         "img": ""
+    },
+    {
+        "id": 22,
+        "email": "sargilla@gmail.com",
+        "password": "$2a$10$Eq6b6OLvNouWvo7nF3TuZOzer2DiV3qES/GVzlzbFTKdeWAksOEJ6",
+        "img": ""
     }
 ]

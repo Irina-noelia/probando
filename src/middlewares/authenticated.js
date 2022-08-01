@@ -1,9 +1,10 @@
-const authenticated = {
-	auth: (req, res, next) => {
-		if (req.session && req.session.user === "amy" && req.session.admin)
-      return next();
-    else
-      return res.sendStatus(401);
-  }}
+const authenticated = (req, res, next) => {
+  if (!req.session.user) {
+    console.log("e sta pasando");
+    res.locals.mustLogging = "Debes loguearte si queres acceder a eso";
+    return res.redirect("/login");
+  }
+  next();
+};
 
-module.exports = authenticated
+module.exports = authenticated;
