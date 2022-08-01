@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<%- include('./partials/head') %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Helártico</title>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" ></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/estilo1.css" >
+</head>
+
+<body>
+  <section id="header">
+    <a href="" ><img src="images/logo.png" class="logo" alt="logo"> </a>
+
+    <div>
+     <ul id="navbar">
+         <li> <a href="/" class="active">Home </a></li>
+         <li> <a href="/products">Shop </a></li>
+         <li> <a href="">Nosotros </a></li>
+         <li> <a href="">Contacto </a></li>
+         <div class="btn-group">
+             <button type="button" class="btn btn-default dropdown-toggle"
+                     data-toggle="dropdown">
+                     <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                     
+             </button>
+           
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="#">Acción #1</a></li>
+               <li><a href="#">Acción #2</a></li>
+               <li><a href="#">Acción #3</a></li>
+
+             </ul>
+           </div>   
+     </ul>
+    </div>
+    
+ </section>
+
+  <main class="">
+    
+    <!-- Cuerpo principal -->
+    <section class="row-form">
+      <article class="col-12  card">
+        <div class="card-body">
+          <h2 class="text-black text-center ">Actualizar producto</h2>
+        </div>
+      </article>
+    </section>
+
+    <section class="bg-home pt-4">
+      <div class="container">
+        <div class="row-form">
+          <div class="col-8 mx-auto  ">
+            <div class="create-form text-center">
+              <form action="/edit/<%= productoEditar.id%>?_method=PUT" method="POST">
+                <div class="">
+                  <figure class="form-group p-1">
+                    <img class="w-80 size" src="/images/<%= productoEditar.imagen%>" alt="">
+                  </figure>
+                  <input type="hidden" name="imagen" value="<%= productoEditar.imagen%>">
+                  <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                  <input type="file" name="imagen" >
+
+                </div>
+
+                <div class="form-group p-1">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="" name="nombre" placeholder="nombre"  value="<%= productoEditar.nombre%>">
+                </div>
+               
+                <div class="form-group p-1">
+                  <label for="precio">Precio</label>
+                  <input type="number" class="" name="precio" placeholder="Indique el precio"  value="<%= productoEditar.precio%>">
+                </div>
+                
+      
+                </div>
+                <div class="form-group p-1 text-center">
+                  <button type="submit" class=" btn btn-info ">Actualizar</button>
+                  
+                </div>
+
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

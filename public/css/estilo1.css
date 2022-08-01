@@ -1,0 +1,403 @@
+@import url('http://fonts.cdnfonts.com/css/league-spartan');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+main {
+  height: 70%;
+}
+
+.class-form {
+  padding: 1%
+}
+
+.div-size {
+  width: 100%;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 80px;
+    color: black;
+    text-decoration: solid;
+}
+
+body {
+    width: 100%;
+  
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgb(233, 243, 249);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover, 
+#navbar li a.active{
+    color: blue;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: blue; 
+  position: absolute;
+  bottom : -4px;
+  left: 20px;
+
+}
+
+
+#helartico {
+    background-image: url("/images/1020428.jpg");
+    height: 90vh;
+    width: 100%;
+    background-position: top 55% right 0% ;
+    background-size: cover;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+#helartico h4 {
+    padding-bottom: 15px;
+}
+
+#helartico h1 {
+    color:rgb(31, 31, 168) 
+}
+
+#helartico button {
+    background-image: url("/images/boton2.png");
+    background-color: transparent;
+    border: 0;
+    padding: 80px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 600;
+    background-size: cover;
+    width: 30vw;
+
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+#feature .fe-fox {
+    width: 180px;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #0000;
+    border-radius: 4px;
+    margin: 15px 0px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.size {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 5%;
+    
+}
+
+.imagen {
+  display: flex;
+  flex-direction: row;
+}
+
+.texto {
+        position: absolute;
+        top: 60vw;
+        left: 23vw;
+        background-color:black;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        color: aliceblue;
+    }
+
+    .texto:hover {
+        font-size:large
+    }
+
+/**------------products-----------------------------*/
+
+#product1 {
+    text-align: center;
+    
+}
+
+#product1 .pro-container { 
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    min-height: 320px;
+    padding: 10px 12px;
+    border-radius: 15%;
+    background:  rgb(233, 243, 249);
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+
+    border: 1px solid #cce7d0;
+    margin: 15px 0px;
+    transition: 0.2s ease;
+    position: relative
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.07);
+}
+#product1 .pro img {
+    width: 100%;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    height: 60%;
+    object-fit: cover;
+
+
+}
+
+
+div.text-danger {
+    color: red;
+    font: 200;
+}
+
+.a {
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0px;
+}
+
+#product1 .pro .des span {
+    font-style:normal
+}
+
+#product1 .pro .des span h5 {
+    padding-top: 7px;
+    color:black;
+    font-size: 14px;
+}
+
+#product1 .pro .des  h4 {
+    padding-top: 7px;
+    color:blue;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    position: absolute;
+    bottom : 20px;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/**------------products-----------------------------*/
+
+    .footer-distributed{
+        background: rgb(233, 243, 249);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        font: bold 16px sans-serif;
+        text-align: center;
+        padding: 50px 60px 40px;
+        overflow: hidden;
+        background-color: rgb(233, 243, 249);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+      footer-distributed .footer-left{
+        float: left;
+      }
+      
+      /* The company logo */
+      
+      .footer-distributed h3{
+        color:  rgb(31, 31, 168) ;
+        font: normal 42px 'Roboto', cursive;
+        margin: 0 0 10px;
+      }
+      
+      .footer-distributed h3 span{
+        color:  #5383d3;
+      }
+      
+      /* Footer links */
+      
+      .footer-distributed .footer-links{
+        color:   rgb(31, 31, 168) ;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+      
+      .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:  inherit;
+      }
+      
+      .footer-distributed .footer-company-name{
+        color:  #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+      }
+      
+      /* Footer social icons */
+      
+      .footer-distributed .footer-icons{
+        margin-top: 40px;
+      }
+      
+      .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:  #33383b;
+        border-radius: 2px;
+      
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+      
+        margin-right: 3px;
+        margin-bottom: 5px;
+      }
+      
+      /* Footer Right */
+      
+      
+      
+      
+    
+    
+      
+      /* If you don't want the footer to be responsive, remove these media queries */
+      
+      @media (max-width: 1000px) {
+      
+        .footer-distributed {
+          font: bold 14px sans-serif;
+        }
+      
+        .footer-distributed .footer-company-name{
+          font-size: 12px;
+        }
+      
+        .footer-distributed form input,
+        .footer-distributed form textarea{
+          width: 250px;
+        }
+      
+        .footer-distributed form button{
+          padding: 10px 35px;
+        }
+      
+      }
+      
+      @media (max-width: 800px) {
+      
+        .footer-distributed{
+          padding: 30px;
+        }
+      
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-right{
+          float: none;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      
+        .footer-distributed .footer-left{
+          margin-bottom: 40px;
+        }
+      
+        .footer-distributed form{
+          margin-top: 30px;
+        }
+      
+        .footer-distributed form{
+          display: block;
+        }
+      
+        .footer-distributed form button{
+          float: none;
+        }
+      }      
+
+
+      .foot-lnk{
+        text-align:center;
+          color: #1161ee;
+        padding-top: 5%;
+      }

@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "nombre": "1 KG HELADO ",
+    "descripcion": "",
+    "precio": "2001",
+    "imagen": "kilo.png",
+    "categoria": "helado"
+  },
+  {
+    "id": 2,
+    "nombre": "1/2 kg HELADO",
+    "descripcion": "",
+    "precio": 900,
+    "imagen": "medio-kilo.png",
+    "categoria": "helado"
+  },
+  {
+    "id": 3,
+    "nombre": "1/4 kg HELADO",
+    "descripcion": "",
+    "precio": 530,
+    "imagen": "cuarto.jpg",
+    "category": "helado"
+  },
+  {
+    "id": 4,
+    "nombre": "franui",
+    "descripcion": "",
+    "precio": 370,
+    "imagen": "franui1.jpg",
+    "category": "postre helado"
+  },
+  {
+    "id": 6,
+    "nombre": "paleta",
+    "descripcion": "",
+    "precio": 370,
+    "imagen": "paleta1.jpg",
+    "category": "paleta"
+  },
+  {
+    "id": 7,
+    "nombre": "paleta",
+    "descripcion": "",
+    "precio": 370,
+    "imagen": "paleta1.jpg",
+    "category": "paleta"
+  },
+  {
+    "id": 8,
+    "nombre": "Torta Oreo",
+    "descripcion": "",
+    "precio": 1370,
+    "imagen": "torta-oreo.png",
+    "category": "tortas heladas"
+  },
+  {
+    "id": 9,
+    "nombre": "Postre helado sabor chocotorta",
+    "descripcion": "",
+    "precio": 370,
+    "imagen": "foto5.png",
+    "category": "paleta"
+  },
+  {
+    "id": 11,
+    "nombre": "Pan",
+    "precio": "1230",
+    "imagen": "defaultImg.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "helado",
+    "precio": "1250",
+    "imagen": "defaultImg.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Irina",
+    "precio": "1250",
+    "imagen": "defaultImg.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "helado",
+    "descripcion": "helado de chocolate",
+    "precio": "1250",
+    "imagen": "alfajor helado.jpg"
+  }
+]

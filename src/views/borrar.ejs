@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="es">
+<%- include('./partials/head') %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Helártico</title>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" ></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/estilo1.css" >
+</head>
+
+<body>
+  <section id="header">
+    <a href="" ><img src="images/logo.png" class="logo" alt="logo"> </a>
+
+    <div>
+     <ul id="navbar">
+         <li> <a href="/" class="active">Home </a></li>
+         <li> <a href="/products">Shop </a></li>
+         <li> <a href="">Nosotros </a></li>
+         <li> <a href="">Contacto </a></li>
+         <div class="btn-group">
+             <button type="button" class="btn btn-default dropdown-toggle"
+                     data-toggle="dropdown">
+                     <a class="" href="/usuario/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                     
+             </button>
+           
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="#">Acción #1</a></li>
+               <li><a href="#">Acción #2</a></li>
+               <li><a href="#">Acción #3</a></li>
+
+             </ul>
+           </div>   
+     </ul>
+    </div>
+    
+ </section>
+  <main class="">
+    
+    <!-- Cuerpo principal -->
+    <section class="row-form">
+      <article class="col-12  card">
+        <div class="card-body">
+          <h2 class="text-black text-center ">Eliminar producto</h2>
+        </div>
+      </article>
+    </section>
+
+    <section class="bg-home pt-4">
+      <div class="container">
+        <div class="content-text text-center">¿Eliminar el producto :<%= productoBorrar.name %> ?
+            <form action="/delete/<%= productoBorrar.id %>?_method=DELETE
+                " method="POST">
+                <input type="hidden" name="id" value="<%= productoBorrar.id %>">
+                <button type="submit" class="btn btn btn-info">Eliminar</button>
+                <a href="/products" class="btn btn btn-info">Volver</a>
+              </form>
+              
+      </div>
+    </section>
+  </main>
+</body>
+
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3>Hel<span>Artico</span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#">Nosotros</a>
+      ·
+      <a href="#">Shop</a>
+      ·
+      <a href="#">Contacto</a>
+      ·
+    </p>
+
+    <p class="footer-company-name">Helártico © 2015</p>
+
+    <div class="footer-icons">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+  </div>
+
+  
+</footer>
+
+</html>
