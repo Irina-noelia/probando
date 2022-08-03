@@ -497,5 +497,12 @@
         "password": "$2a$10$X3inocGYe.8i9Eo5pErcfe7AdtRl1Pg5.Loh6KnCyK/O8D6WYGq4m",
         "img": "",
         "admin": "on"
+    },
+    {
+        "id": 77,
+        "email": "francodigiovanni@hotmail.com",
+        "password": "$2a$10$v4b5KmYX0nk1tURm/N3HdemGiYA6FX6jRlbpnjEIuP2gluklnlz0S",
+        "img": "",
+        "admin": "on"
     }
 ]
