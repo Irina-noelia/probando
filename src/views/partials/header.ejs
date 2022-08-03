@@ -15,12 +15,20 @@
              </button>
            
              <ul class="dropdown-menu" role="menu">
-               <li><a href="/login">Login</a></li>
-               <li><a href="/register">Resistrarse</a></li>
-               
-
-     
-             </ul>
+                <% if (locals.user) { %>
+                  <li>Hola <%= locals.user.email %>
+                  </li>
+                  <li><a href="/logout">Logout</a></li>
+                  <% } else { %>
+  
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Registrarse</a></li>
+                    <% } %>
+  
+  
+  
+  
+              </ul>
 
            </div>
          

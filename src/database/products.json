@@ -87,5 +87,12 @@
     "descripcion": "helado de chocolate",
     "precio": "1250",
     "imagen": "alfajor helado.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "tiramisu",
+    "descripcion": "delicioso",
+    "precio": "2600",
+    "imagen": "717597.jpg"
   }
 ]
