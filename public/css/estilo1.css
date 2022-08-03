@@ -142,7 +142,8 @@ body {
 }
 
 .size {
-    width: 20vw;
+  padding-left: 15px;
+    width: 30vw;
     height: 20vw;
     border-radius: 5%;
     
