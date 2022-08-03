@@ -112,17 +112,11 @@ body {
 }
 
 #helartico button {
-    background-image: url("/images/boton2.png");
+    border: none;
     background-color: transparent;
-    border: 0;
-    padding: 120px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    font-weight: 600;
-    background-size: cover;
-    width: 30vw;
-
 }
+
+
 
 .section-p1 {
     padding: 40px 80px;
