@@ -5,6 +5,7 @@ const databaseJson = require("../database/databaseJson");
 const databaseFilename = "../database/users.json";
 
 const controller = {
+  
   showLogin: function (req, res) {
     return res.render("auth/login");
   },
@@ -35,11 +36,7 @@ const controller = {
     if (!bcryptjs.compareSync(req.body.password, user.password)) {
       return res.render("auth/error-user");
     }
-    // else if(req.query.username === "amy" || req.query.password === "amyspassword") {
-    //     req.session.user = "amy";
-    //     req.session.admin = true;
-    //     res.send("login success!");
-    // }
+
 
     //guardar en session, sacar el password por seguridad
     req.session.user = user;
@@ -55,8 +52,12 @@ const controller = {
       });
     }
 
+    if (req.body.admin =="on" ){
+        return res.redirect("/create")
+    }
+
     //redirigir al perfil
-    return res.redirect("/profile");
+    return res.redirect("/");
   },
   showRegister: function (req, res) {
     return res.render("auth/register");
@@ -95,10 +96,13 @@ const controller = {
       email: req.body.email,
       password: pass,
       img: image,
+      admin: req.body.admin
     });
 
     //reescribo el json
     databaseJson.writeJson(users, databaseFilename);
+
+    
 
     //hago algo más? <--------
     //luego a donde redirijo? <-----------
@@ -113,12 +117,9 @@ const controller = {
     //res.clearCookie('key')
   },
   profile: function (req, res) {
-    console.log(req.session.user);
-    return res.redirect("/products");
+   
   },
-  confirmUser: function (req, res) {
-    return res.send("confirmando al usuaro");
-  },
+  
 };
 
 module.exports = controller;

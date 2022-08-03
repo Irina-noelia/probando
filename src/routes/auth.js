@@ -6,6 +6,8 @@ const { check } = require("express-validator");
 
 const controller = require("../controllers/authController");
 const redirectIfAuthenticated = require("../middlewares/redirectIfAuthenticated");
+const isAdmin = require("../middlewares/isAdmin");
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -17,6 +19,8 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+
+
 
 router.get("/login", redirectIfAuthenticated, controller.showLogin);
 router.post("/login", controller.login);
@@ -48,6 +52,6 @@ router.get("/logout", controller.logout);
 
 router.get("/profile", controller.profile);
 
-router.get("/confirm-user", controller.confirmUser);
+
 
 module.exports = router;
