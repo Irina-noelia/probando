@@ -26,14 +26,14 @@ main {
 }
 
 h1 {
-    font-size: 50px;
-    line-height: 80px;
-    color: black;
-    text-decoration: solid;
+    color:  rgb(31, 31, 168) ;
+    font: normal 92px 'Roboto', cursive;
+    
 }
 
-letras_home{
-
+.letras{
+    font-size: 30px;
+    color: rgb(31, 31, 168);
 }
 
 body {
@@ -115,11 +115,18 @@ body {
     color:rgb(31, 31, 168) 
 }
 
+
+
+#helartico button img {
+
+    width: 400px;
+}
+
 #helartico button {
     border: none;
     background-color: transparent;
+    
 }
-
 
 
 .section-p1 {
