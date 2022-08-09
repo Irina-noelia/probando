@@ -3,15 +3,15 @@ const sequelize = require('../database');
 
 
 
-const Usuario = sequelize.define(
-	"usuarios", {
-		user_id:Sequelize.INTEGER,
-		email:Sequelize.STRING,
-        contraseña: Sequelize.STRING,
-        image: Sequelize.STRING,
-        clasificacion : Sequelize.STRING,
+const Ventas = sequelize.define(
+	"ventas", {
+		venta_id:Sequelize.INTEGER,
+		fecha:Sequelize.DATE,
+        medio_de_pago: Sequelize.STRING,
+        total: Sequelize.DECIMAL,
+        usuario_id : Sequelize.INTEGER,
 	}, {timestamps: false,
 }
 );
 
-module.exports = Usuario;
+module.exports = Ventas;
