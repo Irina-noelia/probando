@@ -7,4 +7,6 @@ const authenticated = require('../middlewares/authenticated');
 /* GET home page. */
 router.get('/', controller.home);
 
+router.get("/pedido", controller.pedido)
+
 module.exports = router;
