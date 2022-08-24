@@ -59,21 +59,21 @@
           <div class="create-form text-center">
             <form action="/create" method="POST">
               <div  class="form-group p-1">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" name="nombre" id="name">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" id="name">
               </div>
               <div  class="form-group p-1">
-                <label for="descripcion">Descripción</label>
-                <input type="text" name="descripcion" id="name">
+                <label for="description">Descripción</label>
+                <input type="text" name="description" id="name">
             </div>
             <div  class="form-group p-1">
-              <label for="precio">Precio</label>
-              <input type="text" name="precio" id="price">
+              <label for="price">Precio</label>
+              <input type="text" name="price" id="price">
             </div>
 
               <div  class="form-group p-1">
-                <label for="imagen">Imagen</label>
-                <input accept="image/*" type="file" name ="imagen" multiple>
+                <label for="image">Imagen</label>
+                <input accept="image/*" type="file" name ="image" multiple>
               </div>
 
               <div  class="form-group p-1">
@@ -102,37 +102,7 @@
       </div>
     </div>
   </section>
-
-  <div class="pro-container">
-      <% products.forEach( prod => { %>
-      <div class="pro">
-          <img src="images/<%= prod.imagen %>" alt="" >
-          <div class="des">
-              <h5> <%= prod.nombre %> </h5>
-              <span><%= prod.descripcion %></span>
-              <h4> <%= prod.precio %> </h4>
-          </div>
-      <div class="cart">
-          
-    <a href="/delete/<%= prod.id %> " class="btn btn-info m-1"><i class="fa-solid fa-trash-can"></i></a> 
-    
-    <a href="/edit/<%= prod.id %>">
-      <button class="btn btn-info m-1"><i class="fa-solid fa-pen-to-square"></i></button>
-    </a>
-  </div>
-      </div>
-      <% } ) %>
-
-</section>
-
-  <main class="">
-    
-    
-
-    
-  </main>
-</body>
-
+  
 <footer class="footer-distributed">
 
   <div class="footer-left">

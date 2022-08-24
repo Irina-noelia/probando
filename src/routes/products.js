@@ -5,7 +5,8 @@ const router = express.Router();
 const multer = require("multer");
 
 // ************ Controller Require ************
-const productsController = require("../controllers/productsController");
+
+const ProductoController = require("../controllers/productosController");
 const auth = require("../middlewares/authenticated");
 // const auth = require('../middlewares/authenticated');
 
@@ -21,21 +22,20 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /*** GET ALL PRODUCTS ***/
-router.get("/products", auth, productsController.home);
+router.get("/products",  ProductoController.list);
 
 /*
 /*** CREATE ONE PRODUCT ***/
-router.get("/create", productsController.createForm);
-router.post("/create", upload.any(), productsController.create);
+router.get("/create", ProductoController.add);
+router.post("/create", upload.any(), ProductoController.almacenarEnDB);
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/edit/:id", productsController.editForm);
-router.put("/edit/:id", productsController.editProcess);
+router.get("/edit/:id", ProductoController.edit);
+router.put("/edit/:id", ProductoController.editarRegistro);
 
-router.get("/delete/:id", productsController.deleteForm);
-router.delete("/delete/:id", productsController.delete);
+router.get("/delete/:id", ProductoController.delete);
+router.delete("/delete/:id", ProductoController.destroy);
 
-/*** DELETE ONE PRODUCT***/
-//router.???('/:id', productsController.destroy);
+
 
 module.exports = router;

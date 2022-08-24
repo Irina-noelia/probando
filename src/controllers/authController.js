@@ -1,8 +1,9 @@
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const databaseJson = require("../database/databaseJson");
 
-const databaseFilename = "../database/users.json";
+const db = require('../database/models');
+const User = require("../database/models/User");
+
 
 const controller = {
   
@@ -20,20 +21,22 @@ const controller = {
       return res.render("auth/login", { errors: errors, olds: req.body });
     }
 
-    //leo el json
-    const users = databaseJson.readJson(databaseFilename);
+    
+    const users = db.User.findAll()
 
     console.log(req.body);
     //buscar al usuario
-    let user = users.find(
-      (u) => u.email.toLowerCase() == req.body.email.toLowerCase()
-    );
+    let user = db.User.findOne({
+      where: {email : 'jose@gmail.com'}})
+      
+    
+      
     if (!user) {
       return res.send("usuario o clave invalido");
     }
 
     //comparar las passwords
-    if (!bcryptjs.compareSync(req.body.password, user.password)) {
+    if (!bcryptjs.compareSync(req.body.password, User.password)) {
       return res.render("auth/error-user");
     }
 
@@ -75,9 +78,9 @@ const controller = {
 
     //si esta bien registro al usuario
     //leo el json
-    const users = databaseJson.readJson(databaseFilename);
+    
 
-    const idCalculated = databaseJson.lastElementId(users) + 1;
+    
 
     //si hay imagen
     let image = "";
@@ -99,8 +102,7 @@ const controller = {
       admin: req.body.admin
     });
 
-    //reescribo el json
-    databaseJson.writeJson(users, databaseFilename);
+    
 
     
 

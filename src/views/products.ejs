@@ -21,11 +21,11 @@
             <div class="pro-container">
                 <% products.forEach( prod => { %>
                 <div class="pro">
-                    <img src="images/<%= prod.imagen %>" alt="" >
+                    <img src="images/<%= prod.image %>" alt="" >
                     <div class="des">
-                        <h5> <%= prod.nombre %> </h5>
-                        <span><%= prod.descripcion %></span>
-                        <h4> <%= prod.precio %> </h4>
+                        <h5> <%= prod.name %> </h5>
+                        <span><%= prod.description %></span>
+                        <h4> <%= prod.price %> </h4>
                     </div>
                 <div class="cart">
                     <a href="/pedido" class="btn btn-info m-1" ><i class="fa-solid fa-cart-shopping"></i>  </a>

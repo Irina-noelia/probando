@@ -57,25 +57,25 @@
         <div class="row-form">
           <div class="col-8 mx-auto  ">
             <div class="create-form text-center">
-              <form action="/edit/<%= productoEditar.id%>?_method=PUT" method="POST">
+              <form action="/edit/<%= producto.id%>?_method=PUT" method="POST">
                 <div class="">
                   <figure class="form-group p-1">
-                    <img class="w-80 size" src="/images/<%= productoEditar.imagen%>" alt="">
+                    <img class="w-80 size" src="/images/<%= producto.image%>" alt="">
                   </figure>
-                  <input type="hidden" name="imagen" value="<%= productoEditar.imagen%>">
+                  <input type="hidden" name="imagen" value="<%= producto.image%>">
                   <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
                   <input type="file" name="imagen" >
 
                 </div>
 
                 <div class="form-group p-1">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" class="" name="nombre" placeholder="nombre"  value="<%= productoEditar.nombre%>">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="" name="name" placeholder="nombre"  value="<%= producto.name%>">
                 </div>
                
                 <div class="form-group p-1">
-                  <label for="precio">Precio</label>
-                  <input type="number" class="" name="precio" placeholder="Indique el precio"  value="<%= productoEditar.precio%>">
+                  <label for="price">Precio</label>
+                  <input type="number" class="" name="price" placeholder="Indique el precio"  value="<%= producto.price%>">
                 </div>
                 
       

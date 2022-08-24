@@ -54,10 +54,15 @@
 
     <section class="bg-home pt-4">
       <div class="container">
-        <div class="content-text text-center">¿Eliminar el producto :<%= productoBorrar.name %> ?
-            <form action="/delete/<%= productoBorrar.id %>?_method=DELETE
+        <div class="content-text text-center">¿Eliminar el producto : <br>
+                                             <%= producto.name %> <%= producto.description %><br>
+                                             <figure class="form-group p-1">
+                                             <img class="w-80 size " src="/images/<%= producto.image%>" alt=""> <br>
+                                            </figure>
+                                             $<%= producto.price %> <br>
+            <form action="/delete/<%= producto.id %>?_method=DELETE
                 " method="POST">
-                <input type="hidden" name="id" value="<%= productoBorrar.id %>">
+                <input type="hidden" name="id" value="<%= producto.id %>">
                 <button type="submit" class="btn btn btn-info">Eliminar</button>
                 <a href="/products" class="btn btn btn-info">Volver</a>
               </form>
