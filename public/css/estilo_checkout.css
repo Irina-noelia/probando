@@ -37,9 +37,9 @@
   }
   body #wrapper #container {
     background: white;
-    height: 440px;
+    height: 500px;
     min-width: 600px;
-    width: 600px;
+    width: 700px;
     z-index: 1;
     -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
@@ -50,7 +50,7 @@
     min-width: 240px;
     height: 100%;
     float: left;
-    background: blue;;
+    background: #7177b2;;
   }
   body #wrapper #container #left-col #left-col-cont {
     margin: 20px 25px;
@@ -176,7 +176,7 @@
     font-size: 0.9em;
   }
   body #wrapper #container form input:focus {
-    border-color: #e67e22;
+    border-color: #4c5772;
   }
   body #wrapper #container form input::-webkit-input-placeholder {
     opacity: 0.5;
@@ -212,7 +212,7 @@
     font-size: 0.8em;
   }
   body #wrapper #container form button#purchase {
-    background: #e67e22;
+    background: #7177b2;
     color: white;
     margin: 0 0 8px;
     font-size: 0.9em;

@@ -22,7 +22,7 @@ const upload = multer({ storage });
 
 
 
-router.get("/login", redirectIfAuthenticated, controller.showLogin);
+router.get("/login",  controller.showLogin);
 router.post("/login", controller.login);
 
 router.get("/register", redirectIfAuthenticated, controller.showRegister);
@@ -32,6 +32,7 @@ router.post(
   [
     check("email").isEmail().withMessage("El email es invalido"),
     check("password", "Password invalido")
+      .trim()
       .notEmpty()
       .bail()
       .custom(async (password, { req }) => {

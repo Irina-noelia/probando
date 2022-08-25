@@ -12,10 +12,11 @@ module.exports = (sequelize, dataTypes) => {
         password: {
             type: dataTypes.STRING
         },
-        confirmPass: {
+        
+        image: {
             type: dataTypes.STRING
         },
-        image: {
+        admin : {
             type: dataTypes.STRING
         }
     };

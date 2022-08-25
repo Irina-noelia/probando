@@ -9,8 +9,14 @@
 }
 
 main {
+  
   height: 70%;
 }
+.fondo {
+  background-image: url('/images/fondo.png') ;
+  
+  
+     }
 
 .class-form {
   padding: 1%
