@@ -59,7 +59,7 @@ const controller = {
     */
 
     //guardar en session, sacar el password por seguridad
-    //req.session.user = user;
+    
 
     //guardo en la session la fecha en formato numero para luego comparar y validar que no pasen mas de
     // X minutos de inactividad
@@ -72,9 +72,7 @@ const controller = {
       });
     }
     */
-    //if (req.body.admin =="on" ){
-    //    return res.redirect("/create")
-    //}
+   
 
     //redirigir al perfil
     

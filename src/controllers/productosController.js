@@ -1,7 +1,13 @@
 const db = require('../database/models');
  
 const controller = {
-   
+    list_admin: (req, res) => {
+        db.Product
+        .findAll()
+            .then(products => {
+                res.render('producto_admin', {products})
+            })
+    },
 
    list: (req, res) => {
       db.Product
@@ -20,7 +26,7 @@ const controller = {
 
         })
         .then(products => {
-           res.redirect('/products');
+           res.redirect('/create');
         })
    },
    add: function (req, res) {

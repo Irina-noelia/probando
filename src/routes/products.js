@@ -8,6 +8,7 @@ const multer = require("multer");
 
 const ProductoController = require("../controllers/productosController");
 const auth = require("../middlewares/authenticated");
+const isAdmin = require("../middlewares/isAdmin");
 // const auth = require('../middlewares/authenticated');
 
 const storage = multer.diskStorage({
@@ -23,7 +24,7 @@ const upload = multer({ storage });
 
 /*** GET ALL PRODUCTS ***/
 router.get("/products",  ProductoController.list);
-
+router.get("/products/admin", ProductoController.list_admin);
 /*
 /*** CREATE ONE PRODUCT ***/
 router.get("/create", ProductoController.add);

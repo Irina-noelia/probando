@@ -7,7 +7,7 @@ const { check } = require("express-validator");
 const controller = require("../controllers/authController");
 const redirectIfAuthenticated = require("../middlewares/redirectIfAuthenticated");
 const isAdmin = require("../middlewares/isAdmin");
-
+const isLogged = require('../middlewares/userLogged')
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -23,17 +23,24 @@ const upload = multer({ storage });
 
 
 router.get("/login",  controller.showLogin);
-router.post("/login", controller.login);
+router.post("/login", isAdmin, controller.login);
 
 router.get("/register", redirectIfAuthenticated, controller.showRegister);
 router.post(
   "/register",
   upload.any(),
   [
-    check("email").isEmail().withMessage("El email es invalido"),
-    check("password", "Password invalido")
+    check("email")
+    .notEmpty().withMessage('Debes completar el mail')
+    .isEmail().withMessage("El email es invalido"),
+    
+    
+    
+    check("password")
       .trim()
-      .notEmpty()
+      .notEmpty().withMessage('Debes completar la contrasenia')
+      .bail()
+      .isAlphanumeric().withMessage('Debe ser alfanumérica')
       .bail()
       .custom(async (password, { req }) => {
         const cpassword = req.body["confirm-password"];

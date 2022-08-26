@@ -197,7 +197,7 @@ body {
 #product1 .pro {
     width: 23%;
     min-width: 250px;
-    min-height: 320px;
+    min-height: 350px;
     padding: 10px 12px;
     border-radius: 15%;
     background:  rgb(233, 243, 249);
@@ -413,3 +413,26 @@ div.text-danger {
           color: #1161ee;
         padding-top: 5%;
       }
+
+
+  /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.marquee {
+  background-position: 45%;
+  background-position-y:bottom;
+  padding-bottom: 25%;
+  color: blue;
+  text-decoration: solid;
+  font-style: italic;
+  background-image: url('/images/fondo.png');
+}
+
+.shoponline {
+  background-image: url('/images/shoponline.png');
+  padding: 8%;
+}

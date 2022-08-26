@@ -11,14 +11,20 @@
         <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/estilo1.css" >
     </head>
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+    </script>
 
     <body>
       <%- include('./partials/header') %>
-
+      
         <section id="product1" class="section-p1">
-            
-            <h2 class = "shoponline">Tienda online</h2>
-            <a href="/products/admin" class="btn btn-info m-1" >Ingresar como administrador</a>
+            <h2>Tienda</h2>
+            <a href="/create" class="btn-info btn  m-1" >Crear nuevo producto </a>
             <div class="pro-container">
                 <% products.forEach( prod => { %>
                 <div class="pro">
@@ -26,11 +32,12 @@
                     <div class="des">
                         <h5> <%= prod.name %> </h5>
                         <span><%= prod.description %></span>
-                        <h4> $ <%= prod.price %> </h4>
+                        <h3> $ <%= prod.price %> </h3>
                     </div>
                 <div class="cart">
-                    <a href="/pedido" class="btn btn-info m-1" >Agregar<i class="fa-solid fa-cart-shopping"></i>  </a>
-              
+                    <a href="/edit/<%= prod.id %>" class="btn btn-info m-1" ><i class="fa-solid fa-pen-to-square"></i>  </a>
+                    <a href="/delete/<%= prod.id %>" class="btn btn-info m-1" ><i class="fa-solid fa-trash-can"></i> </a>
+                    
             </div>
                 </div>
                 <% } ) %>
@@ -38,7 +45,7 @@
         </section>
         
     </body>
-    <marquee class= "marquee" direction="left"> <h2> 2X1 - 1/4 HELADO </h2> </marquee><br>
+
     
     <footer class="footer-distributed">
 
