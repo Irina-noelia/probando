@@ -61,10 +61,13 @@ body {
     left: 0;
 }
 
+
+
 #navbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 35px;
 }
 
 #navbar li {
@@ -152,12 +155,45 @@ body {
     
 }
 
+.ddl {
+  padding-left: 100px;
+  
+  margin-bottom: 30px;
+
+}
+
+.cremas {
+  padding-left: 100px;
+  
+  margin-bottom: 30px;
+
+}
+
+.saboreshelado {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 .size {
-  padding-left: 15px;
-    width: 30vw;
+  padding-left: 70px;
+    width: 26vw;
     height: 20vw;
-    border-radius: 5%;
+    border-radius: 50%;
     
+}
+
+div.chocolate {
+  padding-left: 150px;
+  margin-bottom: 30px;
+}
+
+.sabores {
+  font-weight: bold;
+  font-size:xx-large;
+  text-align: center;
+  margin: 50px;
 }
 
 .imagen {
@@ -195,22 +231,23 @@ body {
 }
 
 #product1 .pro {
-    width: 23%;
+    width: 25%;
     min-width: 250px;
-    min-height: 350px;
-    padding: 10px 12px;
+    min-height: 300px;
+    padding: 10px 15px;
     border-radius: 15%;
-    background:  rgb(233, 243, 249);
-    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    background:  rgb(222, 227, 230);
+    box-shadow: 30px 30px 30px rgba(0,0,0,0.03);
 
     border: 1px solid #cce7d0;
-    margin: 15px 0px;
+    margin: 25px 10px;
     transition: 0.2s ease;
     position: relative
 }
 
 #product1 .pro:hover {
     box-shadow: 20px 20px 34px rgba(0,0,0,0.07);
+    transform: scale(1.1)
 }
 #product1 .pro img {
     width: 100%;
@@ -240,20 +277,25 @@ div.text-danger {
 }
 
 #product1 .pro .des span {
-    font-style:normal
+    font-style:normal;
+    text-align: justify;
 }
 
-#product1 .pro .des span h5 {
+#product1 .pro .des h5 {
     padding-top: 7px;
     color:black;
     font-size: 14px;
+    font-weight: bold;
+    
+
 }
 
 #product1 .pro .des  h4 {
     padding-top: 7px;
     color:blue;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
+    font-style: oblique;
 }
 
 #product1 .pro .cart {
@@ -264,7 +306,7 @@ div.text-danger {
     font-weight: 500;
     position: absolute;
     bottom : 20px;
-    left: 25%;
+    left: 33%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -416,23 +458,16 @@ div.text-danger {
 
 
   /* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
+
 
 .marquee {
   background-position: 45%;
   background-position-y:bottom;
   padding-bottom: 25%;
-  color: blue;
+  color: rgb(64, 182, 233);
   text-decoration: solid;
   font-style: italic;
   background-image: url('/images/fondo.png');
 }
 
-.shoponline {
-  background-image: url('/images/shoponline.png');
-  padding: 8%;
-}
+

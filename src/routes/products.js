@@ -32,7 +32,7 @@ router.post("/create", upload.any(), ProductoController.almacenarEnDB);
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", ProductoController.edit);
-router.put("/edit/:id", ProductoController.editarRegistro);
+router.put("/edit/:id", upload.any(), ProductoController.editarRegistro);
 
 router.get("/delete/:id", ProductoController.delete);
 router.delete("/delete/:id", ProductoController.destroy);
