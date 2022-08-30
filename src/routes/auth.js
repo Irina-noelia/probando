@@ -38,7 +38,7 @@ router.post(
     
     check("password")
       .trim()
-      .notEmpty().withMessage('Debes completar la contrasenia')
+      .notEmpty().withMessage('Debes completar la contraseña')
       .bail()
       .isAlphanumeric().withMessage('Debe ser alfanumérica')
       .bail()
