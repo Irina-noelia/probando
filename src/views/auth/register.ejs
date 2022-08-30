@@ -6,26 +6,21 @@
   
   <body>
     <%- include('../partials/header') %>
-    <main>
-      <main>
-        <section class="row-form">
-          <article class="col-12  card">
-            <div class="card-body">
-              <h2 class="text-black text-center ">REGISTRATE</h2>
-            </div>
-          </article>
-        </section>
-        <section class="bg-home pt-3">
-          <div class="container">
-            <div class="row-form">
-              <div class="col-8 mx-auto  ">
-                <div class="create-form text-center">
+    
+    <main class="main_register">
+
+        
+        
+        <section class="row-form"> 
+      
+           <h4>Formulario Registro</h4>
       
         
-        <form class="form-new" action="/register" method="POST" enctype="multipart/form-data">
+           <form   action="/register" method="POST" enctype="multipart/form-data">
+
             <div>
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="<%= locals.olds && olds.email ? olds.email : '' %>">
+                <input class="controls" type="text" name="email" id="email" value="<%= locals.olds && olds.email ? olds.email : '' %>" placeholder="Ingrese Email">
                 <% if (locals.errors && errors.email) { %>
                 <span><%= errors.email.msg %></span>
                 <% } %>
@@ -33,7 +28,7 @@
 
             <div>
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password">
+                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese Contraseña">
                 <% if (locals.errors && errors.password) { %>
                 <span><%= errors.password.msg %></span>
                 <% } %>
@@ -41,24 +36,26 @@
 
             <div>
                 <label for="confirm-password">Confirmar contraseña</label>
-                <input type="password" name="confirm-password" id="confirm-password">
+                <input class="controls" type="password" name="confirm-password" id="confirm-password" placeholder="Ingrese Contraseña">
             </div>
             
             <div>
               <label for="img">Imagen</label>
-              <input accept="image/*" type="file" name ="img" multiple>
+              <input  accept="image/*" type="file" name="img" multiple>
             </div>
             <div>
-              <input  name= "admin" type="checkbox" checked="true" />
+
+              <input  name="admin" type="checkbox" checked="true" />
               <label for="admin">Administrador</label>
               </div>
 
             <div>
-                <button type="submit" class="btn btn-info">Unirme</button>
+                <button type="submit" class="btn btn-info unirme-b">Unirme</button>
             </div>
 
         </form>
-      </div>
+       </div>
+       </section>
     </main>
 
   </body>

@@ -40,27 +40,27 @@
         <%= locals.mustLogging %>
         <% }  %>
     </section>
-    <main >
+    <main class="main_register">
       
-      <section class="row-form">
-        <article class="col-12  card">
-          <div class="card-body">
-            <h2 class="text-black text-center ">INGRESAR</h2>
+      
+        
+            
           </div>
         </article>
       </section>
-      <section class="bg-home pt-4">
-        <div class="container">
-          <div class="row-form">
-            <div class="col-8 mx-auto  ">
-              <div class="create-form text-center">
+      <section class="row-form">
+        
+          
+            
+              
                 <p>
                   
                 </p>
                 <form class="form-new" action="/login" method="POST">
                   <div>
+                    <h4>Ingresar</h4>
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email"
+                    <input class="controls"  type="text" name="email" id="email" placeholder="Ingresar Email"
                       value="<%= locals.olds && olds.email ? olds.email : '' %>">
                     <% if (locals.errors && errors.email) { %>
                       <span>
@@ -71,7 +71,7 @@
 
                   <div>
                     <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password">
+                    <input class="controls" type="password" name="password" id="password" placeholder="Ingresar Contraseña">
                     <% if (locals.errors && errors.password) { %>
                       <span>
                         <%= errors.password.msg %>
@@ -90,7 +90,7 @@
                   <label for="admin">Administrador</label>
                   </div>
                   <div>
-                    <button type="submit" class="btn btn-info">Ingresar</button>
+                    <button type="submit" class="btn btn-info unirme-b">Ingresar</button>
 
                   </div>
 
@@ -99,13 +99,13 @@
                 <a href="#forgot">Olvidé la contraseña</a>
               </div>
               <div class="foot-lnk">
-                <h4>Primera vez en Helático?</h4><a href="/register">Registrate</a>
+                <a href="/register">Registrate</a>
               </div>
 
             </div>
           </div>
           </form>
-        </div>
+        
     </main>
 
   </body>

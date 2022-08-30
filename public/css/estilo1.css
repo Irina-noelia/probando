@@ -450,9 +450,9 @@ div.text-danger {
       }      
 
 
+      
       .foot-lnk{
         text-align:center;
-          color: #1161ee;
         padding-top: 5%;
       }
 
@@ -470,4 +470,44 @@ div.text-danger {
   background-image: url('/images/fondo.png');
 }
 
+
+
+/*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
+
+.main_register{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.row-form{
+width: 400px;
+background-color: rgb(79, 143, 170);
+padding: 30px;
+margin: auto;
+margin-top: 30px;
+border-radius: 4px;
+}
+
+.row-form h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.unirme-b{
+background-color: rgb(79, 143, 170);
+}
+
+.controls{
+  width: 100%;
+  background: #ffffff;
+  padding: 4px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  border: 1.5px solid rgb(0, 0, 0);
+  font-size: 18px;
+}
 
