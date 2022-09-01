@@ -12,13 +12,14 @@ const usersRouter = require("./routes/users");
 const productsRouter = require("./routes/products");
 const authRouter = require("./routes/auth");
 const pedidoRouter = require("./routes/pedido");
+const flash = require('connect-flash');
 
 const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
-
+app.use(flash());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

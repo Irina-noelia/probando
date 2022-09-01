@@ -7,7 +7,8 @@ const { check } = require("express-validator");
 const controller = require("../controllers/authController");
 const redirectIfAuthenticated = require("../middlewares/redirectIfAuthenticated");
 const isAdmin = require("../middlewares/isAdmin");
-const isLogged = require('../middlewares/userLogged')
+const isLogged = require('../middlewares/userLogged');
+const authenticated = require("../middlewares/authenticated");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -20,39 +21,38 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+const validator = [
+check("email")
+.notEmpty().withMessage('Debes completar el mail')
+.isEmail().withMessage("El email es invalido"),
+
+check("password")
+  .trim()
+  .notEmpty().withMessage('Debes completar la contraseña')
+  .bail()
+  .isAlphanumeric().withMessage('Debe ser alfanumérica')
+  .bail()
+  .custom(async (password, { req }) => {
+    const cpassword = req.body["confirm-password"];
+
+    // If password and confirm password not same
+    // don't allow to sign up and throw error
+    if (cpassword !== password) {
+      throw new Error("Las pass deben coincidir");
+    }
+  })
+  .bail(),
+];
 
 
 router.get("/login",  controller.showLogin);
-router.post("/login", isAdmin, controller.login);
+router.post("/login",validator, controller.login);
 
 router.get("/register", redirectIfAuthenticated, controller.showRegister);
 router.post(
   "/register",
   upload.any(),
-  [
-    check("email")
-    .notEmpty().withMessage('Debes completar el mail')
-    .isEmail().withMessage("El email es invalido"),
-    
-    
-    
-    check("password")
-      .trim()
-      .notEmpty().withMessage('Debes completar la contraseña')
-      .bail()
-      .isAlphanumeric().withMessage('Debe ser alfanumérica')
-      .bail()
-      .custom(async (password, { req }) => {
-        const cpassword = req.body["confirm-password"];
-
-        // If password and confirm password not same
-        // don't allow to sign up and throw error
-        if (cpassword !== password) {
-          throw new Error("Las pass deben coincidir");
-        }
-      })
-      .bail(),
-  ],
+  validator,
   controller.register
 );
 
