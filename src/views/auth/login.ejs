@@ -4,7 +4,7 @@
 
   </head>
 
-  <body >
+  <body>
 
     <section id="header">
       <a href=""><img src="images/logo.png" class="logo" alt="logo"> </a>
@@ -36,75 +36,85 @@
 
 
       </div>
-      
+
     </section>
     <main class="main_register">
-      
-      
-        
-            
-          </div>
-        </article>
+
+
+
+
+      </div>
+      </article>
       </section>
       <section class="row-form">
-        
-          
-            
-              
-                <p>
-                  
-                </p>
-                <form class="form-new" action="/login" method="POST" enctype="multipart/form-data">
-                  <div>
-                    
-                    <h4>Ingresar</h4>
-                    <label for="email">Email</label><div class="form-error"> <% if (locals.errors && errors.email) { %>
-                      <span><%= errors.email.msg %></span>
-                      <% } %> </div>
-                    <input class="controls"  type="text" name="email" id="email" placeholder="Ingresar Email"
-                      value="<%= locals.olds && olds.email ? olds.email : '' %>">
-                    
-                  </div>
 
-                  <div>
-                    <label for="password">Contraseña</label><div class="form-error"> <% if (locals.errors && errors.password) { %>
-                      <span><%= errors.password.msg %></span>
-                      <% } %> </div>
-                    <input class="controls" type="password" name="password" id="password" placeholder="Ingresar Contraseña">
-                    
-                  </div>
 
-                  <div>
-                    <div>
-                      <input type="checkbox" name="rememberMe" id="remember-me">
-                      <label for="remember-me">Recuerdame (por 30 días)</label>
-                    </div>
-                  </div>
-                  <div>
-                  <input  name= "admin" type="checkbox" checked="true" />
-                  <label for="admin">Administrador</label>
-                  </div>
-                  <div>
-                    <button type="submit" class="btn btn-info unirme-b">Ingresar</button>
 
-                  </div>
 
-              </div>
-              <div class="foot-lnk">
-                <a href="#forgot">Olvidé la contraseña</a>
-              </div>
-              <div class="foot-lnk">
-                <a href="/register">Registrate</a>
-              </div>
+        <p>
 
+        </p>
+        <form class="form-new" action="/login" method="POST">
+          <div>
+
+            <h4>Ingresar</h4>
+            <label for="email">Email</label>
+            <div class="form-error">
+              <% if (locals.errors && errors.email) { %>
+                <span>
+                  <%= errors.email.msg %>
+                </span>
+                <% } %>
+            </div>
+            <input class="controls" type="text" name="email" id="email" placeholder="Ingresar Email"
+              value="<%= locals.olds && olds.email ? olds.email : '' %>">
+
+          </div>
+
+          <div>
+            <label for="password">Contraseña</label>
+            <div class="form-error">
+              <% if (locals.errors && errors.password) { %>
+                <span>
+                  <%= errors.password.msg %>
+                </span>
+                <% } %>
+            </div>
+            <input class="controls" type="password" name="password" id="password" placeholder="Ingresar Contraseña">
+
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="rememberMe" id="remember-me">
+              <label for="remember-me">Recuerdame (por 30 días)</label>
             </div>
           </div>
-          </form>
-        
+          <!-- <div>
+            <input name="admin" type="checkbox" checked="true" />
+            <label for="admin">Administrador</label>
+          </div> -->
+          <div>
+            <button type="submit" class="btn btn-info unirme-b">Ingresar</button>
+
+          </div>
+
+          </div>
+          <div class="foot-lnk">
+            <a href="#forgot">Olvidé la contraseña</a>
+          </div>
+          <div class="foot-lnk">
+            <a href="/register">Registrate</a>
+          </div>
+
+          </div>
+          </div>
+        </form>
+
     </main>
 
   </body>
-  
+
   <footer class="footer-distributed">
 
     <div class="footer-left">
