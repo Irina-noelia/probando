@@ -77,7 +77,7 @@ const controller = {
     //}
 
     //redirigir al perfil
-    
+    //
   },
   showRegister: function (req, res) {
     return res.render("auth/register");

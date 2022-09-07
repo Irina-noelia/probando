@@ -3,12 +3,13 @@ const path = require("path");
 const router = express.Router();
 const multer = require("multer");
 const { check } = require("express-validator");
+const db = require('../database/models');
 
 const controller = require("../controllers/authController");
 const redirectIfAuthenticated = require("../middlewares/redirectIfAuthenticated");
 const isAdmin = require("../middlewares/isAdmin");
-const isLogged = require('../middlewares/userLogged');
-const authenticated = require("../middlewares/authenticated");
+//const isLogged = require('../middlewares/userLogged');
+//const authenticated = require("../middlewares/authenticated");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -24,13 +25,25 @@ const upload = multer({ storage });
 const validator = [
 check("email")
 .notEmpty().withMessage('Debes completar el mail')
-.isEmail().withMessage("El email es invalido"),
+.isEmail().withMessage("El email es invalido")
+.custom(async (email, { req }) => {
+  const UniqueEmail = req.body["email"];
+  db.User.findAll().then((user) => {
+      if (UniqueEmail in user){
+        throw new Error("Usuario ya registrado");
+      }
+    }  
+)}),
+  
 
 check("password")
   .trim()
   .notEmpty().withMessage('Debes completar la contraseña')
   .bail()
-  .isAlphanumeric().withMessage('Debe ser alfanumérica')
+  .isLength({
+    min: 8
+  })
+  .withMessage("La constraseña debe contener al menos 8 caracteres")
   .bail()
   .custom(async (password, { req }) => {
     const cpassword = req.body["confirm-password"];
@@ -42,11 +55,19 @@ check("password")
     }
   })
   .bail(),
+
+  check('image')
+  .custom((value, {req}) => {
+    if(req.files.mimetype !== 'jpg', 'jpeg', 'png', 'gif'){
+      throw new Error("Solo se aceptan jpg, jpeg, png y gif");
+    }
+})
+
 ];
 
 
 router.get("/login",  controller.showLogin);
-router.post("/login",validator, controller.login);
+router.post("/login", controller.login);
 
 router.get("/register", redirectIfAuthenticated, controller.showRegister);
 router.post(

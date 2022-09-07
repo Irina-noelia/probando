@@ -481,11 +481,12 @@ div.text-danger {
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ margin-bottom: 10%;
 }
 
 .row-form{
 width: 400px;
-background-color: rgb(79, 143, 170);
+background-color: rgb(131, 190, 215);
 padding: 30px;
 margin: auto;
 margin-top: 30px;
@@ -512,5 +513,5 @@ background-color: rgb(79, 143, 170);
 }
 
 .form-error {
-  color: red;
+  color: rgb(161, 16, 16);
 }

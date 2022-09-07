@@ -9,7 +9,7 @@ const multer = require("multer");
 const ProductoController = require("../controllers/productosController");
 const auth = require("../middlewares/authenticated");
 const isAdmin = require("../middlewares/isAdmin");
-// const auth = require('../middlewares/authenticated');
+const userLoggedMW = require('../middlewares/userLogged');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
