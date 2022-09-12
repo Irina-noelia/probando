@@ -110,7 +110,7 @@ const controller = {
 
     //hago algo más? <--------
     //luego a donde redirijo? <-----------
-    return res.redirect("/login"); //solucionar para ir al login
+    return res.redirect("/login"); 
   },
   logout: function (req, res) {
     //eliminar la session

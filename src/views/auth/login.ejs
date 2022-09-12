@@ -56,7 +56,9 @@
         </p>
         <form class="form-new" action="/login" method="POST">
           <div>
-
+            <% if (!locals.user) { %>
+              <%= locals.mustLogging %>
+              <% } %>
             <h4>Ingresar</h4>
             <label for="email">Email</label>
             <div class="form-error">

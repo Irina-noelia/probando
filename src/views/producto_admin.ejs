@@ -11,13 +11,7 @@
         <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/estilo1.css" >
     </head>
-    <script>
-        // When the user clicks on <div>, open the popup
-        function myFunction() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-        }
-    </script>
+    
 
     <body>
       <%- include('./partials/header') %>
@@ -32,7 +26,7 @@
                     <div class="des">
                         <h5> <%= prod.name %> </h5>
                         <span><%= prod.description %></span>
-                        <h3> $ <%= prod.price %> </h3>
+                        <h4> $ <%= prod.price %> </h4>
                     </div>
                 <div class="cart">
                     <a href="/edit/<%= prod.id %>" class="btn btn-info m-1" ><i class="fa-solid fa-pen-to-square"></i>  </a>

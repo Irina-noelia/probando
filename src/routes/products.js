@@ -23,8 +23,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /*** GET ALL PRODUCTS ***/
-router.get("/products",  ProductoController.list);
-router.get("/products/admin", ProductoController.list_admin);
+router.get("/products", auth,  ProductoController.list);
+router.get("/admin", ProductoController.list_admin);
 /*
 /*** CREATE ONE PRODUCT ***/
 router.get("/create", ProductoController.add);
