@@ -177,7 +177,7 @@ body {
 
 
 .size {
-  padding-left: 70px;
+  padding-left: 80px;
     width: 26vw;
     height: 20vw;
     border-radius: 50%;
@@ -194,6 +194,7 @@ div.chocolate {
   font-size:xx-large;
   text-align: center;
   margin: 50px;
+  margin-top: 120px;
 }
 
 .imagen {
@@ -514,4 +515,24 @@ background-color: rgb(79, 143, 170);
 
 .form-error {
   color: rgb(161, 16, 16);
+}
+
+.row-form-edit {
+  background-color: rgb(222, 227, 230);
+  width: 30vw;
+  margin-left: 30vw;
+  padding: 20px;
+  border-radius: 20%;
+  margin-bottom: 30px;
+}
+
+
+.row-form-create {
+  background-color: rgb(222, 227, 230);
+  width: 30vw;
+  height: 30vw;
+  margin-left: 27vw;
+  padding: 20px;
+  border-radius: 20%;
+  margin-bottom: 30px;
 }

@@ -14,38 +14,13 @@
 </head>
 
 <body>
-  <section id="header">
-    <a href="" ><img src="images/logo.png" class="logo" alt="logo"> </a>
-
-    <div>
-     <ul id="navbar">
-         <li> <a href="/" class="active">Home </a></li>
-         <li> <a href="/products">Shop </a></li>
-         <li> <a href="">Nosotros </a></li>
-         <li> <a href="">Contacto </a></li>
-         <div class="btn-group">
-             <button type="button" class="btn btn-default dropdown-toggle"
-                     data-toggle="dropdown">
-                     <a class="" href="/usuario/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                     
-             </button>
-           
-             <ul class="dropdown-menu" role="menu">
-               <li><a href="#">Acción #1</a></li>
-               <li><a href="#">Acción #2</a></li>
-               <li><a href="#">Acción #3</a></li>
-
-             </ul>
-           </div>   
-     </ul>
-    </div>
-    
- </section>
+  <%- include('./partials/header') %>
+  
  <main >
  <section id="product1" class="section-p1">
   
   <!-- Cuerpo principal -->
-  <section class="row-form">
+  <section >
     <article class="col-12  card">
       <div class="card-body">
         <h2 class="text-black text-center ">Crear nuevo producto</h2>
@@ -55,8 +30,8 @@
   </section>
   <section class="bg-home pt-4">
     <div class="container">
-      <div class="row-form">
-        <div class="col-8 mx-auto  ">
+      <div class="row-form-create">
+        <div class="col-12 mx-auto  ">
           <div class="create-form text-center">
             <form action="/create" method="POST">
               <div  class="form-group p-1">

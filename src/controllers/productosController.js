@@ -26,7 +26,7 @@ const controller = {
 
         })
         .then(products => {
-           res.redirect('/create');
+           res.redirect('/admin');
         })
    },
    add: function (req, res) {
@@ -43,13 +43,13 @@ const controller = {
 
   editarRegistro: (req, res) => {
       db.Product.update({
-      name: req.body.nombre,      
+      name: req.body.name,      
       description: req.body.description,
       price: req.body.price}, {
          where : {id: req.params.id }
       }
      )
-     res.redirect('/products');
+     res.redirect('/admin');
   },
   delete: function (req, res) {
    let productId = req.params.id;
