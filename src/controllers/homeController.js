@@ -6,4 +6,8 @@ module.exports = {
   pedido: function (req, res) {
     return res.render("pedido", { title: "Express" });
   },
+
+  sabores: function (req,res) {
+    return res.render("sabores", { title: "Express" });
+  }
 };

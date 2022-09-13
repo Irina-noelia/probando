@@ -139,7 +139,7 @@ body {
 
 
 .section-p1 {
-    padding: 40px 80px;
+    padding: 0px 0px;
 }
 
 #feature .fe-fox {
@@ -226,29 +226,30 @@ div.chocolate {
 #product1 .pro-container { 
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 30px;
     flex-wrap: wrap;
+    padding: 50px;
 
 }
 
 #product1 .pro {
     width: 25%;
     min-width: 250px;
-    min-height: 300px;
-    padding: 10px 15px;
+    min-height: 250px;
+    padding: 15px 20px;
     border-radius: 15%;
     background:  rgb(222, 227, 230);
     box-shadow: 30px 30px 30px rgba(0,0,0,0.03);
 
-    border: 1px solid #cce7d0;
-    margin: 25px 10px;
+    border: 1px solid #7c86b0;
+    margin: 25px 40px;
     transition: 0.2s ease;
     position: relative
 }
 
 #product1 .pro:hover {
     box-shadow: 20px 20px 34px rgba(0,0,0,0.07);
-    transform: scale(1.1)
+    transform: scale(1.05)
 }
 #product1 .pro img {
     width: 100%;
@@ -300,7 +301,7 @@ div.text-danger {
 }
 
 #product1 .pro .cart {
-    width: 40px;
+    
     height: 40px;
     line-height: 40px;
     border-radius: 50px;
@@ -526,13 +527,109 @@ background-color: rgb(79, 143, 170);
   margin-bottom: 30px;
 }
 
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2,lfr);
+  grid-template-rows: repeat(2,lfr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.form-group .form-group-1 {
+  
+  grid-column:auto;
+
+
+}
+
+.form-group .form-group-2 {
+  grid-column:auto;
+  
+
+}
 
 .row-form-create {
-  background-color: rgb(222, 227, 230);
-  width: 30vw;
+
+  border-style:groove;
+  margin: auto;
+  width: 80vw;
   height: 30vw;
-  margin-left: 27vw;
-  padding: 20px;
-  border-radius: 20%;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
+  padding: 40px 0px 0px 0px;
+  border-radius: 5%;
+  
+  
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Corben:700');
+
+h1 {
+	font-family: 'Corben', cursive;
+	font-size: 6rem;
+	color: rgb(136, 205, 217);
+	letter-spacing: 0.1rem;
+	text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66);
+}
+
+.hero {
+  
+	background-color: lightsteelblue;
+	// min-height: 100vh;
+	min-height: 30rem;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	
+	&__content {
+		position: relative;
+		align-self: center;
+		padding: 3rem 0;
+	}
+}
+
+.snow {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.snow .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#snow-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
+
+.ubicar {
+  margin: 5px;
+  color: black;
+  background-color: #5383d3;
+  font-size: large;
+  padding: auto;
 }

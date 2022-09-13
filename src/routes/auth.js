@@ -21,21 +21,31 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+const validatorLogin = [
+  check("email")
+    .notEmpty()
+    .withMessage("Debes completar el mail")
+    .isEmail()
+    .withMessage("El email es invalido"),
+  
+  check("password")
+    .trim()
+    .notEmpty()
+    .withMessage("Debes completar la contraseña")
+    .bail()
+    .isLength({
+      min: 8,
+    })
+    .withMessage("La constraseña debe contener al menos 8 caracteres")
 
+]
 const validator = [
   check("email")
     .notEmpty()
     .withMessage("Debes completar el mail")
     .isEmail()
     .withMessage("El email es invalido"),
-  // .custom(async (email, { req }) => {
-  //   const UniqueEmail = req.body["email"];
-  //     db.User.findAll().then((user) => {
-  //       if (UniqueEmail in user){
-  //         throw new Error("Usuario ya registrado");
-  //       }
-  //     }
-  // )}),
+  
   check("password")
     .trim()
     .notEmpty()
@@ -65,7 +75,7 @@ const validator = [
 ];
 
 router.get("/login", controller.showLogin);
-router.post("/login", controller.login);
+router.post("/login",validatorLogin, controller.login);
 
 router.get("/register", redirectIfAuthenticated, controller.showRegister);
 router.post("/register", upload.single("img"), validator, controller.register);

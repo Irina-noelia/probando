@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/estilo1.css" >
+  <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -28,26 +29,26 @@
     </article>
 
   </section>
-  <section class="bg-home pt-4">
+  <section class="bg-home pt-5">
     <div class="container">
       <div class="row-form-create">
-        <div class="col-12 mx-auto  ">
-          <div class="create-form text-center">
-            <form action="/create" method="POST">
-              <div  class="form-group p-1">
+        <div class="col-5 mx-auto  ">
+          <div class="create-form text-center form-group">
+            <form id= 'myForm' action="/create" method="POST">
+              <div  class="form-group-1">
                   <label for="name">Nombre</label>
                   <input type="text" name="name" id="name">
               </div>
-              <div  class="form-group p-1">
+              <div  class="form-group-2">
                 <label for="description">Descripción</label>
-                <input type="text" name="description" id="name">
+                <input type="text" name="description" id="descr">
             </div>
-            <div  class="form-group p-1">
+            <div  class="form-group-3">
               <label for="price">Precio</label>
               <input type="text" name="price" id="price">
             </div>
 
-              <div  class="form-group p-1">
+              <div  class="form-group-4">
                 <label for="image">Imagen</label>
                 <input accept="image/*" type="file" name ="image" multiple>
               </div>

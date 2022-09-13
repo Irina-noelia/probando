@@ -7,6 +7,6 @@ const authenticated = require('../middlewares/authenticated');
 /* GET home page. */
 router.get('/', controller.home);
 
-
+router.get('/sabores', controller.sabores)
 
 module.exports = router;

@@ -30,7 +30,7 @@ const controller = {
         return res.render("index");
       } else {
         return res.render("auth/login", {
-          errors: { email: { msg: "Email invalido" } },
+          errors: { email: { msg: "Email o contraseña invalida" } },
         });
       }
     });
