@@ -50,11 +50,11 @@
     min-width: 240px;
     height: 100%;
     float: left;
-    background: #7177b2;;
+    background: lightsteelblue;
   }
   body #wrapper #container #left-col #left-col-cont {
     margin: 20px 25px;
-    color: white;
+    color: rgb(9, 9, 9);
   }
   body #wrapper #container #left-col #left-col-cont h2 {
     margin: 25px 0 0 0;
@@ -76,7 +76,7 @@
     float: right;
   }
   body #wrapper #container #left-col #left-col-cont div.item .meta-col h3 {
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin: 10px 0 0 5px;
   }
   body #wrapper #container #left-col #left-col-cont div.item .meta-col p {

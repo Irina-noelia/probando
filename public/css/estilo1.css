@@ -32,14 +32,14 @@ main {
 }
 
 h1 {
-    color:  rgb(31, 31, 168) ;
+    color:  rgb(100, 179, 219) ;
     font: normal 92px 'Roboto', cursive;
     
 }
 
 .letras{
     font-size: 30px;
-    color: rgb(31, 31, 168);
+    color: rgb(88, 173, 222);
 }
 
 body {
@@ -106,7 +106,7 @@ body {
     background-image: url("/images/1020428.jpg");
     height: 90vh;
     width: 100%;
-    background-position: top 55% right 0% ;
+    background-position: top 35% right 0% ;
     background-size: cover;
     padding: 0px 80px;
     display: flex;
@@ -121,14 +121,15 @@ body {
 }
 
 #helartico h1 {
-    color:rgb(31, 31, 168) 
+    color:rgb(74, 90, 179) 
 }
 
 
 
 #helartico button img {
-
-    width: 400px;
+    margin-top: 30%;
+    width: 250px;
+    margin-left: 30%;
 }
 
 #helartico button {
@@ -139,7 +140,13 @@ body {
 
 
 .section-p1 {
+  
     padding: 0px 0px;
+}
+
+.section-p2 {
+  
+  padding: 0px 50px;
 }
 
 #feature .fe-fox {
@@ -172,20 +179,23 @@ body {
 .saboreshelado {
     display: flex;
     flex-direction: row;
+    margin-left: 4%;
 }
 
 
 
+
+
 .size {
-  padding-left: 80px;
-    width: 26vw;
+  padding-left: 90px;
+    width: 27vw;
     height: 20vw;
     border-radius: 50%;
     
 }
 
 div.chocolate {
-  padding-left: 150px;
+  padding-left: 110px;
   margin-bottom: 30px;
 }
 
@@ -194,7 +204,7 @@ div.chocolate {
   font-size:xx-large;
   text-align: center;
   margin: 50px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .imagen {
@@ -487,12 +497,13 @@ div.text-danger {
 }
 
 .row-form{
-width: 400px;
-background-color: rgb(131, 190, 215);
-padding: 30px;
+width: 500px;
+background-color:rgb(134, 165, 206);
+padding: 40px;
 margin: auto;
 margin-top: 30px;
 border-radius: 4px;
+margin-bottom: 30px;
 }
 
 .row-form h4 {
@@ -501,7 +512,7 @@ border-radius: 4px;
 }
 
 .unirme-b{
-background-color: rgb(79, 143, 170);
+background-color: rgb(40, 66, 101);
 }
 
 .controls{
@@ -519,20 +530,20 @@ background-color: rgb(79, 143, 170);
 }
 
 .row-form-edit {
-  background-color: rgb(222, 227, 230);
-  width: 30vw;
-  margin-left: 30vw;
-  padding: 20px;
-  border-radius: 20%;
-  margin-bottom: 30px;
+  
+  width: 50vw;
+  height: 20vw;
+  margin-bottom: 25%;
+  
+  
+  margin-left: 25%;
+  
+  
 }
 
 .form-group {
-  display: grid;
-  grid-template-columns: repeat(2,lfr);
-  grid-template-rows: repeat(2,lfr);
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  padding: 5px;
+  
 }
 
 .form-group .form-group-1 {
@@ -546,6 +557,15 @@ background-color: rgb(79, 143, 170);
   grid-column:auto;
   
 
+}
+
+@keyframes animacion {
+  25% { transform:translateY(-50px);}
+  
+}
+
+.animacion {
+  animation: animacion 5s;
 }
 
 .row-form-create {
@@ -574,7 +594,7 @@ h1 {
 
 .hero {
   
-	background-color: lightsteelblue;
+	background-color: rgb(134, 165, 206);
 	// min-height: 100vh;
 	min-height: 30rem;
 	position: relative;
@@ -632,4 +652,60 @@ h1 {
   background-color: #5383d3;
   font-size: large;
   padding: auto;
+}
+
+$color1: white;
+$color2: black;
+
+
+
+
+
+
+h1 {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/6963bbf342d87b3a2150bd8f59682b89.jpg);
+	-webkit-background-clip: text;
+	background-size: contain;
+	width: 90%;
+	text-align: center;
+	font-weight: 400;
+
+	&::before {
+		content: attr(data-heading);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%
+		);
+		-webkit-background-clip: text;
+		color: transparent;
+		mix-blend-mode: screen;
+    animation: shine;
+		background-size: 100%;
+		text-shadow: 2px 2px 10px rgba(#000, 0.3), -2px 2px 10px rgba(#000, 0.2),
+			-2px -2px 10px rgba(#000, 0.2);
+	}
+}
+
+
+
+/* Not needed for demo */
+
+@font-face {
+	font-family: "frozen";
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff");
+}
+
+
+
+h1 {
+	top: 40%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	font-size: 8vw;
+	margin: 0;
+	font-family: "frozen", serif;
+  
+	
 }

@@ -29,23 +29,23 @@
     </article>
 
   </section>
-  <section class="bg-home pt-5">
+  <section class="bg-home ">
     <div class="container">
-      <div class="row-form-create">
-        <div class="col-5 mx-auto  ">
-          <div class="create-form text-center form-group">
+      <div class="row-form">
+        <div class=" mx-auto  ">
+          <div class="create-form text-center ">
             <form id= 'myForm' action="/create" method="POST">
-              <div  class="form-group-1">
+              <div  class="form-group">
                   <label for="name">Nombre</label>
-                  <input type="text" name="name" id="name">
+                  <input class= "controls" type="text" name="name" id="name">
               </div>
-              <div  class="form-group-2">
+              <div  class="form-group">
                 <label for="description">Descripción</label>
-                <input type="text" name="description" id="descr">
+                <input type="text" class= "controls" name="description" id="descr">
             </div>
-            <div  class="form-group-3">
+            <div  class="form-group">
               <label for="price">Precio</label>
-              <input type="text" name="price" id="price">
+              <input type="text"class= "controls" name="price" id="price">
             </div>
 
               <div  class="form-group-4">
@@ -53,22 +53,13 @@
                 <input accept="image/*" type="file" name ="image" multiple>
               </div>
 
-              <div  class="form-group p-1">
-                <label for="category">Categoría</label>
-                
-                <select name="category" id="category">
-                <option value="Helados">Helados</option>
-                <option value="Postres">Postres</option>
-                <option value="Smothies">Smothies</option>
-                <option value="Comida frizada">Comida frizzada</option>
-              </select>
-              </div>
+              
       
               
       
           
               <div class="form-group p-1">
-                <button type="submit" class="btn btn btn-info">Crear</button>
+                <button type="submit" class="btn  btn-info">Crear</button>
                 
               </div>
 
