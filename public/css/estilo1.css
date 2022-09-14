@@ -104,7 +104,7 @@ body {
 
 #helartico {
     background-image: url("/images/1020428.jpg");
-    height: 90vh;
+    height: 70vh;
     width: 100%;
     background-position: top 35% right 0% ;
     background-size: cover;
@@ -191,6 +191,7 @@ body {
     width: 27vw;
     height: 20vw;
     border-radius: 50%;
+   
     
 }
 
@@ -238,21 +239,22 @@ div.chocolate {
     justify-content: space-between;
     padding-top: 30px;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 20px;
 
 }
 
 #product1 .pro {
-    width: 25%;
-    min-width: 250px;
-    min-height: 250px;
-    padding: 15px 20px;
+    width: 250px;
+    height: 370px;
+    min-width: 200px;
+    min-height: 300px;
+    padding: 15px 15px;
     border-radius: 15%;
     background:  rgb(222, 227, 230);
     box-shadow: 30px 30px 30px rgba(0,0,0,0.03);
 
     border: 1px solid #7c86b0;
-    margin: 25px 40px;
+    margin: 45px 10px;
     transition: 0.2s ease;
     position: relative
 }
@@ -323,7 +325,9 @@ div.text-danger {
     flex-direction: row;
     align-items: center;
 }
-
+.actualizar {
+  margin-left: -25%;
+}
 /**------------products-----------------------------*/
 
     .footer-distributed{
@@ -466,6 +470,9 @@ div.text-danger {
       .foot-lnk{
         text-align:center;
         padding-top: 5%;
+        text-decoration: none;
+        color: black;
+        text-decoration-color: #33383b;
       }
 
 
@@ -525,6 +532,29 @@ div.text-danger {
   width: 100%;
   color: black;
   font-weight: 700;
+}
+
+.container-form-create{
+  font-size: 15px;
+  display: inline-block;
+  text-decoration: none;
+  width: 60%;
+  color: black;
+  font-weight: 200;
+  padding-right: 14%;
+  padding-top: 2px;
+  border: solid;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  
+}
+
+
+
+.myForm {
+  margin-left: 30%;
+
 }
 
 .container-form  a {
@@ -635,12 +665,23 @@ border: none;
  margin-bottom: 10%;
 }
 
+.cono {
+  width: 250px;
+  height: 320px;
+  padding-left: 0%;
+  position: relative;
+  margin-left: -40%;
+}
+
+
 .row-form{
-width: 500px;
-background-color:rgb(134, 165, 206);
-padding: 40px;
+width: 55%;
+padding-left: 120px;
+padding-right: 120px;
+padding-top: 15px;
+padding-bottom: 2px;
 margin: auto;
-margin-top: 30px;
+margin-top: 42px;
 border-radius: 4px;
 margin-bottom: 30px;
 }
@@ -651,21 +692,48 @@ margin-bottom: 30px;
 }
 
 .unirme-b{
-background-color: rgb(40, 66, 101);
+background-color: rgb(16, 29, 46);
+margin-left: 100px;
+margin-top: 6px;
+width: 200px;
 }
+
+.unirme-c{
+  background-color: rgb(16, 29, 46);
+  margin-left: 50px;
+  margin-top: 15px;
+  width: 100px;
+  }
 
 .controls{
   width: 100%;
-  background: #ffffff;
+  background: white;
   padding: 4px;
-  border-radius: 14px;
+  border-radius: 1px;
   margin-bottom: 16px;
-  border: 1.5px solid rgb(0, 0, 0);
-  font-size: 18px;
+  border: 1.0px solid rgb(0, 0, 0);
+  font-size: 14px;
 }
 
 .form-error {
   color: rgb(161, 16, 16);
+}
+
+.form-new {
+  
+  position: absolute;
+  margin-top: -4%;
+  margin-left: 17%;
+}
+
+
+
+.horizontal {
+  width: 70%;
+  object-fit: cover;
+  margin-left: 8%;
+  height: 300px;
+  margin-top: -25%
 }
 
 .row-form-edit {
@@ -734,7 +802,7 @@ h1 {
 .hero {
   
 	background-color: rgb(134, 165, 206);
-	// min-height: 100vh;
+	 min-height: 100vh;
 	min-height: 30rem;
 	position: relative;
 	overflow: hidden;
@@ -786,15 +854,14 @@ h1 {
 }
 
 .ubicar {
-  margin: 5px;
+  margin: 10px;
   color: black;
-  background-color: #5383d3;
-  font-size: large;
+  background-color: #fafbfd;
+  font-size: medium;
   padding: auto;
 }
 
-$color1: white;
-$color2: black;
+
 
 
 
@@ -847,4 +914,10 @@ h1 {
 	font-family: "frozen", serif;
   
 	
+}
+
+
+.icono {
+  margin-left: 30%;
+  
 }

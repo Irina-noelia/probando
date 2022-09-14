@@ -8,15 +8,19 @@
     <%- include('../partials/header') %>
 
       <main class="main_register">
-
+        <article class="col-12  card">
+          <div class="card-body">
+            <h2 class=" text-center ">Registrarse</h2>
+          </div>
+        </article>
 
 
         <section class="row-form">
 
-          <h4>Formulario Registro</h4>
+          
 
 
-          <form action="/register" method="POST" enctype="multipart/form-data">
+          <form class="form-new" action="/register" method="POST" enctype="multipart/form-data">
 
             <div>
               <label for="email">Email</label>
@@ -63,6 +67,7 @@
           </div>
         </section>
       </main>
+      <img class='horizontal' src="/images/horizontal.jpg">
 
   </body>
   <footer class="footer-distributed">
@@ -72,13 +77,13 @@
       <h3>Hel<span>Artico</span></h3>
 
       <p class="footer-links">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         ·
-        <a href="#">Nosotros</a>
+        <a href="/#sabores">Nosotros</a>
         ·
-        <a href="#">Shop</a>
+        <a href="/products">Shop</a>
         ·
-        <a href="#">Contacto</a>
+        <a href="/contacto">Contacto</a>
         ·
       </p>
 

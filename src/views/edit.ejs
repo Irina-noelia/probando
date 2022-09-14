@@ -10,10 +10,52 @@
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/estilo1.css" >
+  <script src="/js/script.js"></script>
 </head>
+<section id="header">
+  <a href="/" ><img src="" class="" alt=""> </a>
 
+  <div>
+   <ul id="navbar">
+       <li> <a href="/" class="">Home </a></li>
+       <li> <a href="/products">Shop </a></li>
+       <li> <a href="/#sabores">Sabores </a></li>
+       <li> <a href="/contacto">Contacto </a></li>
+       <div class="btn-group">
+           <button type="button" class="btn btn-default dropdown-toggle"
+                   data-toggle="dropdown">
+                   <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                   
+           </button>
+           
+         
+           <ul class="dropdown-menu" role="menu">
+              <% if (locals.user) { %>
+                <li>Hola <%= locals.user.email %>
+                </li>
+                <li><a href="/logout">Logout</a></li>
+                <% } else { %>
+
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Registrarse</a></li>
+                  <% } %>
+
+
+
+
+            </ul>
+
+         </div>
+       
+       
+   </ul>
+
+
+  </div>
+  
+</section>
 <body>
-  <%- include('./partials/header') %>
+  
   
 
   <main class="">
@@ -26,16 +68,17 @@
         </div>
       </article>
     </section>
-
+    
+    <a href="/admin" class="icono">Volver a productos<i class="fa-solid fa-arrow-rotate-left"></i></a>
     <section class="bg-home pt-4">
       <div class="container">
         <div class="row-form-edit">
           <div class="mx-auto col-10 ">
             <div class="create-form text-center">
-              <form action="/edit/<%= producto.id%>?_method=PUT" method="POST">
+              <form  id= 'myForm' action="/edit/<%= producto.id%>?_method=PUT" method="POST">
                 <div class="">
                   <figure class="form-group p-1">
-                    <img class="w-40 size" src="/images/<%= producto.image%>" alt="">
+                    <img class="actualizar size" src="/images/<%= producto.image%>" alt="">
                   </figure>
                   <input type="hidden" name="image" value="<%= producto.image%>">
                   <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
@@ -46,17 +89,17 @@
 
                 <div class="form-group p-2">
                   <label for="name">Nombre</label>
-                  <input type="text" class="" name="name" placeholder="nombre"  value="<%= producto.name%>">
+                  <input type="text" class="" name="name" id="name" placeholder="nombre"  value="<%= producto.name%>">
                 </div>
 
                 <div class="form-group p-3">
                   <label for="description">Descripcion</label>
-                  <input type="text" class="" name="description" placeholder="Descripcion" value="<%= producto.description%>">
+                  <input type="text" class="" name="description" id="descr" placeholder="Descripcion" value="<%= producto.description%>">
                 </div>
                
                 <div class="form-group p-1">
                   <label for="price">Precio</label>
-                  <input type="number" class="" name="price" placeholder="Indique el precio"  value="<%= producto.price%>">
+                  <input type="number" class="" name="price" id="price" placeholder="Indique el precio"  value="<%= producto.price%>">
                 </div>
                 
       

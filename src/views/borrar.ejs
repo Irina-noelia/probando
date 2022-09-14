@@ -13,38 +13,55 @@
   <link rel="stylesheet" href="/css/estilo1.css" >
 </head>
 
-<body>
-  <section id="header">
-    <a href="" ><img src="images/logo.png" class="logo" alt="logo"> </a>
+<section id="header">
+  <a href="/" ><img src="" class="" alt=""> </a>
 
-    <div>
-     <ul id="navbar">
-         <li> <a href="/" class="active">Home </a></li>
-         <li> <a href="/products">Shop </a></li>
-         <li> <a href="">Nosotros </a></li>
-         <li> <a href="">Contacto </a></li>
-         <div class="btn-group">
-             <button type="button" class="btn btn-default dropdown-toggle"
-                     data-toggle="dropdown">
-                     <a class="" href="/usuario/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                     
-             </button>
+  <div>
+   <ul id="navbar">
+       <li> <a href="/" class="">Home </a></li>
+       <li> <a href="/products">Shop </a></li>
+       <li> <a href="/#sabores">Sabores </a></li>
+       <li> <a href="/contacto">Contacto </a></li>
+       <div class="btn-group">
+           <button type="button" class="btn btn-default dropdown-toggle"
+                   data-toggle="dropdown">
+                   <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                   
+           </button>
            
-             <ul class="dropdown-menu" role="menu">
-               <li><a href="#">Acción #1</a></li>
-               <li><a href="#">Acción #2</a></li>
-               <li><a href="#">Acción #3</a></li>
+         
+           <ul class="dropdown-menu" role="menu">
+              <% if (locals.user) { %>
+                <li>Hola <%= locals.user.email %>
+                </li>
+                <li><a href="/logout">Logout</a></li>
+                <% } else { %>
 
-             </ul>
-           </div>   
-     </ul>
-    </div>
-    
- </section>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Registrarse</a></li>
+                  <% } %>
+
+
+
+
+            </ul>
+
+         </div>
+       
+       
+   </ul>
+
+
+  </div>
+  
+</section>
+<body>
+
+  
   <main class="">
     
     <!-- Cuerpo principal -->
-    <section class="row-form">
+    <section class="">
       <article class="col-12  card">
         <div class="card-body">
           <h2 class="text-black text-center ">Eliminar producto</h2>
@@ -65,9 +82,9 @@
                 <input type="hidden" name="id" value="<%= producto.id %>">
                 <button type="submit" class="btn btn btn-info">Eliminar</button>
                 
-                <a href="/products" class="btn btn btn-info">Volver</a>
+                <a href="/admin" class="btn btn btn-info">Volver</a>
               </form>
-              
+              <br>
       </div>
     </section>
   </main>

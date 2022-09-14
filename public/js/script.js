@@ -67,9 +67,10 @@ formulario.addEventListener("submit", (evento) => {
   }
 
   if (contadorDeErrores > 0) {
-    
-    evento.preventDefault()
-    
+    evento.preventDefault();
+  } else {
+    alert("Un nuevo producto fue creado con éxito");
+    formulario.submit();
   }
  
   
@@ -133,3 +134,8 @@ var h1 = document.querySelector("h1");
 h1.addEventListener("input", function() {
     this.setAttribute("data-heading", this.innerText);
 });
+
+
+
+
+

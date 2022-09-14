@@ -14,7 +14,7 @@
           <li> <a href="/" class="">Home </a></li>
           <li> <a href="/products">Shop </a></li>
           <li> <a href="/#sabores">Sabores </a></li>
-          <li> <a href="">Contacto </a></li>
+          <li> <a href="/contacto">Contacto </a></li>
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
               <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
@@ -23,7 +23,7 @@
 
             <ul class="dropdown-menu" role="menu">
               <li><a href="/login">Login</a></li>
-              <li><a href="/register">Resistrarse</a></li>
+              <li><a href="/register">Registrarse</a></li>
 
 
 
@@ -38,18 +38,26 @@
       </div>
 
     </section>
+    
     <main class="main_register">
 
 
 
 
       </div>
+      <article class="col-12  card">
+        <div class="card-body">
+          <h2 class=" text-center ">Ingresar</h2>
+        </div>
       </article>
       </section>
+
+      
+      
       <section class="row-form">
 
-
-
+        
+        
 
         <p>
 
@@ -59,7 +67,7 @@
             <% if (!locals.user) { %>
               <%= locals.mustLogging %>
               <% } %>
-            <h4>Ingresar</h4>
+            <br>
             <label for="email">Email</label>
             <div class="form-error">
               <% if (locals.errors && errors.email) { %>
@@ -97,21 +105,27 @@
             <label for="admin">Administrador</label>
           </div> -->
           <div>
-            <button type="submit" class="btn btn-info unirme-b">Ingresar</button>
+            <button type="submit" class="btn btn-primary unirme-c">Ingresar</button>
 
           </div>
 
           </div>
-          <br>
-          <div class="foot-lnk">
-            <a href="/register">Registrate</a>
+          
+          <div >
+            
+            <a href="/register"><h4 class="foot-lnk">Registrate</h4></a>
+            <br>
           </div>
 
           </div>
+          
           </div>
+          
         </form>
-
+    
+        
     </main>
+    <img class='horizontal' src="/images/horizontal.jpg">
 
   </body>
 
@@ -122,13 +136,13 @@
       <h3>Hel<span>Artico</span></h3>
 
       <p class="footer-links">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         ·
-        <a href="#">Nosotros</a>
+        <a href="/#sabores">Sabores</a>
         ·
-        <a href="#">Shop</a>
+        <a href="/products">Shop</a>
         ·
-        <a href="#">Contacto</a>
+        <a href="/contacto">Contacto</a>
         ·
       </p>
 
