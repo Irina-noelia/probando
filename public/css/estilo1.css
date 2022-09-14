@@ -489,6 +489,145 @@ div.text-danger {
 /*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------Franco-----------------------------------------------------------------------------------------*/
 
+
+.contacto{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container-form{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 50px;
+  margin-top: 90px;
+}
+
+.containter-form h2{
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+
+.container-form p{
+  font-size: 17px;
+  
+  margin-bottom: 30px;
+}
+
+.container-form a{
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  font-weight: 700;
+}
+
+.container-form  a {
+  color: rgb(47, 141, 167);
+}
+
+.mensaje{
+  display: grid;
+  padding-top: 3px;
+  
+}
+
+.input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-form form .campo, textarea{
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+}
+
+
+.container-form form textarea{
+  max-width: 530px;
+  min-width: 530px;
+  min-height: 140px;
+  min-height: 240px;
+}
+
+.color{
+  color: black;
+}
+
+.imagen_contacto{
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.container-form .btn-enviar{
+background-color: #3faec7;
+border: none;
+}
+
+.mapa{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1600px;
+  height: 450px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main_register{
  margin: 0;
  padding: 0;

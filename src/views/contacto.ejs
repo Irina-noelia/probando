@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Helártico</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/278943c891.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/estilo1.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href=""><img src="images/logo.png" class="logo" alt="logo"> </a>
+
+        <div>
+            <ul id="navbar">
+                <li> <a href="/" class="">Home </a></li>
+                <li> <a href="/products">Shop </a></li>
+                <li> <a href="/#sabores">Sabores </a></li>
+                <li> <a href="/contacto">Contacto </a></li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <a class="" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <% if (locals.user) { %>
+                        <li>Hola <%= locals.user.email %>
+                        </li>
+                        <li><a href="/logout">Logout</a></li>
+                        <% } else { %>
+
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Registrarse</a></li>
+                        <% } %>
+
+
+
+
+                    </ul>
+
+                </div>
+
+
+            </ul>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="contacto">
+        <div class="container-form">
+            <div class="info-form">
+                <h2>Contactate con nosotros</h2>
+                <p>Completá el formulario o escribinos a helartico@gmail.com y te responderemos a la brevedad!</p>
+
+                <img class="imagen_contacto" src="/images/vitrinas-para-heladeria-.jpg" alt="">
+
+                <a href="#"><i class="fa fa-phone"></i></a>
+                <i>11-4253-7809</i>
+
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <i>helartico@gmail.com</i>
+
+                <a href="#"><i class="fa fa-map-marked"></i></a>
+                <i>CABA</i>
+
+            </div>
+
+            <form class="mensaje" action="3" autocomplete="off">
+
+                <input class="input" type="text" name="nombre" placeholder="Nombre">
+
+                <input class="input"  type="text" name="email" placeholder="Email">
+
+                <input class="input" type="number" name="numero" placeholder="Telefono">
+
+                
+
+                <div class="dropdown input">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" 
+                        data-toggle="dropdown">
+                        Tipo de Consulta
+                    </button>
+                    <div class="dropdown-menu" >
+                        <a class="dropdown-item" href="#"><h5 class="color">Quejas</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="color">Sugerencias</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="color">RRHH</h5> </a>
+                    </div>
+                </div>
+
+                <textarea name="mensaje" placeholder="Mensaje"></textarea>
+
+                <input type="submit" name="enviar" value="Enviar" class="btn-enviar">
+            </form>
+
+        </div>
+
+        
+    </section>
+
+    
+
+
+
+    </div>
+
+    <div id="mapa">
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52556.63497905868!2d-58.486848015401996!3d-34.58418777670528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb65fc9315555%3A0xfe1eeb7c279ddd1!2sHeladerias!5e0!3m2!1ses-419!2sar!4v1663177119190!5m2!1ses-419!2sar"
+            
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+
+
+
+   
+
+
+
+    
+</body>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Hel<span>Artico</span></h3>
+
+        <p class="footer-links">
+            <a href="/">Home</a>
+            ·
+            <a href="/products">Shop</a>
+            ·
+            <a href="/#sabores">Sabores</a>
+            ·
+            <a href="#">Contacto</a>
+            ·
+        </p>
+
+        <p class="footer-company-name">Helártico © 2015</p>
+
+        <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+</html>
