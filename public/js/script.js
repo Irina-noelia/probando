@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
   let nombre = document.querySelector('#name');
   let description = document.querySelector('#descr')
   let precio = document.querySelector('#price')
+  let imagen = document.querySelector('#image')
 
   let contadorDeErrores = 0
   MostrarMensaje = (element, mensaje) =>{
@@ -31,7 +32,7 @@ formulario.addEventListener("submit", (evento) => {
     
     //document.querySelectorAll('.text-danger').forEach(e=> e.remove())
   if(!nombre.value){
-    MostrarMensaje(nombre,"El nombre de producto debe estar completo");
+    MostrarMensaje(nombre,"El campo nombre es obligatorio");
     contadorDeErrores++
   }else {
     inputSuccess(nombre.parentElement)
@@ -49,6 +50,13 @@ formulario.addEventListener("submit", (evento) => {
     contadorDeErrores++
   }else{
     inputSuccess(precio.parentElement)
+  }
+
+  if(!imagen.value){
+    MostrarMensaje(imagen, "El campo imagen es obligatorio");
+    contadorDeErrores++
+  }else{
+    inputSuccess(imagen.parentElement)
   }
 
   if(isNaN(precio.value)){
@@ -107,7 +115,7 @@ window.addEventListener('load', function(){
     formulario.addEventListener("change", (evento) => {
       if( isNaN(precio.value) ){
         precio.style.color = 'red';
-        //MostrarMensaje(precio, "Por favor, introduce un número");
+        
         
       }else {
         precio.style.color = 'green';
@@ -115,6 +123,8 @@ window.addEventListener('load', function(){
       
        
       })
+
+      
 
 })
 

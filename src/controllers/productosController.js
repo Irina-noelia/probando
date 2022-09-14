@@ -86,7 +86,7 @@ const controller = {
                 force: true
             })
             .then(() => {
-                return res.redirect('/products')
+                return res.redirect('/admin')
             })
             .catch(error => res.send(error))
     }
